@@ -1,6 +1,6 @@
 {
   "name": "@byjonas/ffmpeg-binaries",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "main": "index.js",
   "description": "Prebuilt ffmpeg binaries for major platforms.",

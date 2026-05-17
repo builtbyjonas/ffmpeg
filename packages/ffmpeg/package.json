@@ -1,6 +1,6 @@
 {
   "name": "@byjonas/ffmpeg",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "A lightweight, dependency-free Node.js FFmpeg wrapper.",
   "type": "module",
   "main": "dist/index.js",
@@ -24,7 +24,7 @@
     "lint": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@byjonas/ffmpeg-binaries": "workspace:*"
+    "@byjonas/ffmpeg-binaries": "^0.1.0"
   },
   "peerDependenciesMeta": {
     "@byjonas/ffmpeg-binaries": {
