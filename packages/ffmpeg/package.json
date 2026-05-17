@@ -24,7 +24,7 @@
     "lint": "tsc --noEmit"
   },
   "peerDependencies": {
-    "@byjonas/ffmpeg-binaries": "^0.1.0"
+    "@byjonas/ffmpeg-binaries": "latest"
   },
   "peerDependenciesMeta": {
     "@byjonas/ffmpeg-binaries": {
