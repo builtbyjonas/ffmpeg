@@ -1,0 +1,35 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      id-token: write
+    steps:
+      - uses: actions/checkout@v6
+      - name: Use Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+      - name: Install latest npm
+        run: npm i -g npm@latest
+      - name: Install pnpm
+        run: npm install -g pnpm
+      - name: Install dependencies
+        run: pnpm install
+      - name: Build packages
+        run: pnpm -w run build
+      - name: Publish packages
+        run: |
+          cd packages/ffmpeg-binaries
+          npm publish --provenance --access public
+
+          cd ../ffmpeg
+          npm publish --provenance --access public

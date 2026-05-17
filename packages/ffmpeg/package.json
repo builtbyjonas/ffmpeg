@@ -1,0 +1,54 @@
+{
+  "name": "@byjonas/ffmpeg",
+  "version": "0.0.1",
+  "description": "A lightweight, dependency-free Node.js FFmpeg wrapper.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "license": "MIT",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=16"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --dts --format esm,cjs",
+    "lint": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "@byjonas/ffmpeg-binaries": "workspace:*"
+  },
+  "peerDependenciesMeta": {
+    "@byjonas/ffmpeg-binaries": {
+      "optional": true
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builtbyjonas/ffmpeg.git",
+    "directory": "packages/ffmpeg"
+  },
+  "homepage": "https://github.com/builtbyjonas/ffmpeg#readme",
+  "bugs": {
+    "url": "https://github.com/builtbyjonas/ffmpeg/issues"
+  },
+  "keywords": [
+    "ffmpeg",
+    "audio",
+    "video",
+    "converter",
+    "typescript",
+    "node"
+  ],
+  "devDependencies": {
+    "@types/node": "^24.8.0"
+  }
+}

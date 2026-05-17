@@ -1,0 +1,32 @@
+{
+  "name": "@byjonas/ffmpeg-binaries",
+  "version": "0.0.1",
+  "type": "module",
+  "main": "index.js",
+  "description": "Prebuilt ffmpeg binaries for major platforms.",
+  "license": "MIT",
+  "files": [
+    "index.js",
+    "install.js",
+    "README.md"
+  ],
+  "scripts": {
+    "postinstall": "node install.js"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/builtbyjonas/ffmpeg.git",
+    "directory": "packages/ffmpeg-binaries"
+  },
+  "homepage": "https://github.com/builtbyjonas/ffmpeg#readme",
+  "bugs": {
+    "url": "https://github.com/builtbyjonas/ffmpeg/issues"
+  },
+  "dependencies": {
+    "tar": "^7.5.1",
+    "unzipper": "^0.12.3"
+  }
+}
