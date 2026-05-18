@@ -3,6 +3,9 @@
     "target": "ES2022",
     "moduleResolution": "NodeNext",
     "module": "nodenext",
-    "strict": true
-  }
+    "strict": true,
+    "types": ["node"],
+  },
+  "include": ["packages/*/src/**/*"],
+  "exclude": ["node_modules", "dist"]
 }
