@@ -25,6 +25,9 @@ jobs:
         run: npm install -g pnpm
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
+      - name: Update ffmpeg peer dependency version
+        run: |
+          node -e 'const fs = require("node:fs"); const rootPkg = JSON.parse(fs.readFileSync("package.json", "utf8")); const ffmpegPkgPath = "packages/ffmpeg/package.json"; const ffmpegPkg = JSON.parse(fs.readFileSync(ffmpegPkgPath, "utf8")); ffmpegPkg.peerDependencies["@byjonas/ffmpeg-binaries"] = rootPkg.version; fs.writeFileSync(ffmpegPkgPath, JSON.stringify(ffmpegPkg, null, 2) + "\n");'
       - name: Build packages
         run: pnpm -w run build
       - name: Publish packages
