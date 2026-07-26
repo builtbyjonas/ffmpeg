@@ -26,7 +26,7 @@
     "url": "https://github.com/builtbyjonas/ffmpeg/issues"
   },
   "dependencies": {
-    "tar": "^7.5.20",
+    "tar": "^7.5.22",
     "unzipper": "^0.12.5"
   }
 }
