@@ -19,7 +19,7 @@
     "url": "https://github.com/builtbyjonas/ffmpeg/issues"
   },
   "devDependencies": {
-    "@types/node": "^26.2.0",
+    "@types/node": "^26.4.0",
     "prettier": "^3.9.6",
     "tsup": "^8.5.1",
     "typescript": "^7.0.2"
